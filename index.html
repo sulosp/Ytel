@@ -7,6 +7,27 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <!--tailwind configuration-->
+  <script >
+    tailwind.config = {
+      theme: {
+        extend :{
+          colors: {
+           blue: '#5590F5',
+           cyan:'#44BFFF',
+          },
+
+          fontFamily:{
+            sans:['Open Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
   
 </head>
 
@@ -14,7 +35,7 @@
 
   <div class="relative flex flex-col justify-center min-h-screen ">
 
-    <div class="sm:mx-auto sm:w-full md:max-w-md p-10 bg-white rounded-xl shadow border border-zinc-100 flex flex-col gap-10 lg:shadow-lg md:shadow-none">
+    <div class="sm:mx-auto sm:w-full md:max-w-md p-10 bg-white rounded-xl shadow border border-zinc-100 flex flex-col gap-10 lg:shadow-lg md:shadow-none md:boder-none">
 
       <div class=" flex flex-col justify-center items-center h-auto">
         <svg width="93" height="56" viewBox="0 0 93 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +64,7 @@
       <div class="sm:mx-auto sm:w-full sm:max-w-sm h-auto">
         <form class="space-y-6" action="#" method="POST">
           <div>
-            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+            <label for="email" class="block font-bold text-sm  leading-6 text-gray-900">User ID</label>
             <div class="placeholder mt-2 bg-zinc-100 inline-flex items-center w-full rounded-md overflow-hidden">
               <div class="px-2">
               <svg  width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +73,7 @@
                   stroke="#687175" stroke-width="1.4" stroke-linecap="round" />
               </svg>
             </div>
-              <input id="email" placeholder="Input your user ID" name="email" type="email" autocomplete="email" required
+              <input id="email" placeholder="Enter Your User ID" name="email" type="email" autocomplete="email" required
                 class="px-2 focus:border-zinc-100 focus:ring-zinc-100 focus:outline-none bg-zinc-100 w-full  border-0 py-2 placeholder:text-zinc-400 focus:text-zinc-950 text-sm   sm:text-sm sm:leading-6">
 
             </div>
@@ -60,7 +81,7 @@
 
           <div>
             <div class="flex items-center justify-between mt-5">
-              <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+              <label for="password" class="block text-sm font-bold leading-6 text-gray-900">Password</label>
 
             </div>
             <div class="placeholder mt-2 bg-zinc-100 inline-flex items-center  w-full rounded-md overflow-hidden">
@@ -77,13 +98,13 @@
                 class="px-2 focus:border-zinc-100 focus:ring-zinc-100 focus:outline-none bg-zinc-100 w-full  border-0 py-2 placeholder:text-zinc-400 focus:text-zinc-950 text-sm   sm:text-sm sm:leading-6">
             </div>
             <div class="text-sm mt-5">
-              <a href="#" class="font-semibold text-cyan-500 hover:text-cyan-500">Forgot password?</a>
+              <a href="#" class="font-semibold text-cyan hover:text-blue">Forgot password?</a>
             </div>
           </div>
 
           <div class="py-5">
             <button type="submit"
-              class="flex w-full justify-center rounded-[8px] bg-neutral-300  hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-500 px-6 py-2 text-sm font-semibold leading-6 rounded-[8px] text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600">
+              class="flex w-full justify-center rounded-[8px] bg-neutral-300  hover:bg-gradient-to-r hover:from-cyan hover:to-blue px-6 py-2 text-sm font-semibold leading-6 rounded-[8px] text-white shadow-sm hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600">
               <a href="dashboard.html"> Login</a>
             </button>
           </div>
