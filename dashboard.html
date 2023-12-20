@@ -7,12 +7,33 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  
+    <!--tailwind configuration-->
+    <script >
+      tailwind.config = {
+        theme: {
+          extend :{
+            colors: {
+             blue: '#5590F5',
+             cyan:'#44BFFF',
+            },
+  
+            fontFamily:{
+              sans:['Open Sans', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
    
 
 </head>
 
 <body>
-    <div class="relative flex flex-col bg-white text-gray-700 h-[100vh] w-30 p-4 shadow-xl shadow-blue-gray-900/5">
+    <div class="relative flex flex-col bg-white text-gray-700 h-[100vh] w-[15%] p-4 shadow-xl shadow-blue-gray-900/5 ">
         <div class="p-5">
             <svg width="93" height="56" viewBox="0 0 93 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_867_3048)">
@@ -33,13 +54,89 @@
               </svg>
         </div>
         
-        <div>
+        
+            <div class="flex flex-col justify-between">
+
+            <div class="flex flex-col">
+
             <p class="text-m mt-[40px]">Select Campaign</p>
             
-        </div>
+            <div>
+                <button type="button" class="mt-4 inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-neutral-700 text-sm font-normal leading-tight shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                    Campaign 1 | Testing
+                  <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+              </div>
+            
+              <!--
+                Dropdown menu, show/hide based on menu state.
+            
+                Entering: "transition ease-out duration-100"
+                  From: "transform opacity-0 scale-95"
+                  To: "transform opacity-100 scale-100"
+                Leaving: "transition ease-in duration-75"
+                  From: "transform opacity-100 scale-100"
+                  To: "transform opacity-0 scale-95"
+              -->
+              <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                <div class="py-1" role="none">
+                  <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                  <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Testing</a>
+                 
+                  <form method="POST" action="#" role="none">
+                    <button type="submit" class="text-gray-700 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
+                  </form>
+                </div>
+              </div>
+
+              <div class="menu mt-10">
+
+              <p class="text-zinc-400 text-base font-normal font-sans leading-normal">Tools</p>
+
+              <button type="button" class="mt-5 flex flex-row text-neutral-700 text-base font-semibold leading-normal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 19C11.4696 19 10.9609 19.2107 10.5858 19.5858C10.2107 19.9609 10 20.4696 10 21C10 21.5304 10.2107 22.0391 10.5858 22.4142C10.9609 22.7893 11.4696 23 12 23C12.5304 23 13.0391 22.7893 13.4142 22.4142C13.7893 22.0391 14 21.5304 14 21C14 20.4696 13.7893 19.9609 13.4142 19.5858C13.0391 19.2107 12.5304 19 12 19ZM6 1C5.46957 1 4.96086 1.21071 4.58579 1.58579C4.21071 1.96086 4 2.46957 4 3C4 3.53043 4.21071 4.03914 4.58579 4.41421C4.96086 4.78929 5.46957 5 6 5C6.53043 5 7.03914 4.78929 7.41421 4.41421C7.78929 4.03914 8 3.53043 8 3C8 2.46957 7.78929 1.96086 7.41421 1.58579C7.03914 1.21071 6.53043 1 6 1ZM6 7C5.46957 7 4.96086 7.21071 4.58579 7.58579C4.21071 7.96086 4 8.46957 4 9C4 9.53043 4.21071 10.0391 4.58579 10.4142C4.96086 10.7893 5.46957 11 6 11C6.53043 11 7.03914 10.7893 7.41421 10.4142C7.78929 10.0391 8 9.53043 8 9C8 8.46957 7.78929 7.96086 7.41421 7.58579C7.03914 7.21071 6.53043 7 6 7ZM6 13C5.46957 13 4.96086 13.2107 4.58579 13.5858C4.21071 13.9609 4 14.4696 4 15C4 15.5304 4.21071 16.0391 4.58579 16.4142C4.96086 16.7893 5.46957 17 6 17C6.53043 17 7.03914 16.7893 7.41421 16.4142C7.78929 16.0391 8 15.5304 8 15C8 14.4696 7.78929 13.9609 7.41421 13.5858C7.03914 13.2107 6.53043 13 6 13ZM18 5C18.5304 5 19.0391 4.78929 19.4142 4.41421C19.7893 4.03914 20 3.53043 20 3C20 2.46957 19.7893 1.96086 19.4142 1.58579C19.0391 1.21071 18.5304 1 18 1C17.4696 1 16.9609 1.21071 16.5858 1.58579C16.2107 1.96086 16 2.46957 16 3C16 3.53043 16.2107 4.03914 16.5858 4.41421C16.9609 4.78929 17.4696 5 18 5ZM12 13C11.4696 13 10.9609 13.2107 10.5858 13.5858C10.2107 13.9609 10 14.4696 10 15C10 15.5304 10.2107 16.0391 10.5858 16.4142C10.9609 16.7893 11.4696 17 12 17C12.5304 17 13.0391 16.7893 13.4142 16.4142C13.7893 16.0391 14 15.5304 14 15C14 14.4696 13.7893 13.9609 13.4142 13.5858C13.0391 13.2107 12.5304 13 12 13ZM18 13C17.4696 13 16.9609 13.2107 16.5858 13.5858C16.2107 13.9609 16 14.4696 16 15C16 15.5304 16.2107 16.0391 16.5858 16.4142C16.9609 16.7893 17.4696 17 18 17C18.5304 17 19.0391 16.7893 19.4142 16.4142C19.7893 16.0391 20 15.5304 20 15C20 14.4696 19.7893 13.9609 19.4142 13.5858C19.0391 13.2107 18.5304 13 18 13ZM18 7C17.4696 7 16.9609 7.21071 16.5858 7.58579C16.2107 7.96086 16 8.46957 16 9C16 9.53043 16.2107 10.0391 16.5858 10.4142C16.9609 10.7893 17.4696 11 18 11C18.5304 11 19.0391 10.7893 19.4142 10.4142C19.7893 10.0391 20 9.53043 20 9C20 8.46957 19.7893 7.96086 19.4142 7.58579C19.0391 7.21071 18.5304 7 18 7ZM12 7C11.4696 7 10.9609 7.21071 10.5858 7.58579C10.2107 7.96086 10 8.46957 10 9C10 9.53043 10.2107 10.0391 10.5858 10.4142C10.9609 10.7893 11.4696 11 12 11C12.5304 11 13.0391 10.7893 13.4142 10.4142C13.7893 10.0391 14 9.53043 14 9C14 8.46957 13.7893 7.96086 13.4142 7.58579C13.0391 7.21071 12.5304 7 12 7ZM12 1C11.4696 1 10.9609 1.21071 10.5858 1.58579C10.2107 1.96086 10 2.46957 10 3C10 3.53043 10.2107 4.03914 10.5858 4.41421C10.9609 4.78929 11.4696 5 12 5C12.5304 5 13.0391 4.78929 13.4142 4.41421C13.7893 4.03914 14 3.53043 14 3C14 2.46957 13.7893 1.96086 13.4142 1.58579C13.0391 1.21071 12.5304 1 12 1Z" fill="#3D3D3D"/>
+                  </svg>
+              <a class="px-5" href="#"> M Dial</a>
+            </button>
+            <button type="button" class="mt-5 flex flex-row text-neutral-700 text-base font-semibold leading-normal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15.0001 2.3999V5.9999C15.0001 6.66264 15.5373 7.1999 16.2001 7.1999H19.8001M8.40008 7.1999H10.8001M8.40008 10.7999H15.6001M8.40008 14.3999H15.6001M18.0001 4.1999C17.466 3.72204 16.9118 3.15528 16.5619 2.78718C16.3291 2.54224 16.0074 2.3999 15.6695 2.3999H6.5998C5.27432 2.3999 4.19981 3.47441 4.1998 4.79989L4.19971 19.1998C4.1997 20.5253 5.27421 21.5998 6.5997 21.5998L17.3997 21.5999C18.7252 21.5999 19.7997 20.5254 19.7998 19.2L19.8001 6.47773C19.8001 6.1709 19.683 5.87594 19.4701 5.65503C19.0763 5.24655 18.4187 4.57442 18.0001 4.1999Z" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              <a class="px-5" href="#"> Scripts</a>
+            </button>
+            <button type="button" class="mt-5 flex flex-row text-neutral-700 text-base font-semibold leading-normal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M10.2996 21.6001H5.4996C4.17411 21.6001 3.0996 20.5256 3.09961 19.2001L3.0997 4.80013C3.09971 3.47466 4.17422 2.40015 5.4997 2.40015H16.3C17.6255 2.40015 18.7 3.47466 18.7 4.80015V11.4001M13.9 18.2001L16.1 20.4001L20.9 15.6M7.29998 7.20015H14.5M7.29998 10.8001H14.5M7.29998 14.4001H10.9" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              <a class="px-5" href="#"> Forms</a>
+            </button>
+
+            <button type="button" class="mt-5 flex flex-row text-neutral-700 text-base font-semibold leading-normal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M7.49957 12.0846V12M11.9991 12.0846V12M16.4987 12.0846V12M20.9983 12C20.9983 13.2938 20.7253 14.5238 20.2338 15.6356L21 20.9991L16.4039 19.85C15.1019 20.5823 13.5993 21 11.9991 21C7.02906 21 3 16.9706 3 12C3 7.02944 7.02906 3 11.9991 3C16.9692 3 20.9983 7.02944 20.9983 12Z" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              <a class="px-5" href="#"> Message</a>
+            </button>
+
+
+              </div>
+
+
+            </div>
+
+             
+            <div class="flex flex-col">
+                <p class="text-neutral-700 text-base font-semibold font-['Open Sans'] leading-normal">CallBacks</p>
+            </div>
+
+        
+
     </div>
 
-    <div class="w-70"></div>
+    <div class="w-[85%]"></div>
     
 
 
