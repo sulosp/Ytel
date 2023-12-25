@@ -5,37 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!--tailwind configuration-->
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-
-  <!--tailwind configuration-->
-  <script >
-    tailwind.config = {
-      theme: {
-        extend :{
-          colors: {
-           blue: '#5590F5',
-           cyan:'#44BFFF',
-          },
-
-          fontFamily:{
-            sans:['Open Sans', 'sans-serif'],
-          }
-        }
-      }
-    }
   </script>
 
-  
+
 </head>
 
 <body class="font-sans">
 
   <div class="relative flex flex-col justify-center min-h-screen ">
 
-    <div class="sm:mx-auto sm:w-full md:max-w-md p-10 bg-white rounded-xl shadow border border-zinc-100 flex flex-col gap-10 lg:shadow-lg md:shadow-none md:border-none sm:shadow-none sm:border-none">
+    <div
+      class="sm:mx-auto sm:w-full md:max-w-md p-10 bg-white rounded-xl shadow border border-zinc-100 flex flex-col gap-10 lg:shadow-lg md:shadow-none md:border-none sm:shadow-none sm:border-none">
 
       <div class=" flex flex-col justify-center items-center h-auto">
         <svg width="93" height="56" viewBox="0 0 93 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,12 +54,12 @@
             <label for="email" class="block font-bold text-sm  leading-6 text-gray-900">User ID</label>
             <div class="placeholder mt-2 bg-zinc-100 inline-flex items-center w-full rounded-md overflow-hidden">
               <div class="px-2">
-              <svg  width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M2.15869 13C3.0423 11.5262 4.97888 10.5175 8.00021 10.5175C11.0215 10.5175 12.9581 11.5262 13.8417 13M10.4002 5.4C10.4002 6.72548 9.32569 7.8 8.00021 7.8C6.67473 7.8 5.60021 6.72548 5.60021 5.4C5.60021 4.07452 6.67473 3 8.00021 3C9.32569 3 10.4002 4.07452 10.4002 5.4Z"
-                  stroke="#687175" stroke-width="1.4" stroke-linecap="round" />
-              </svg>
-            </div>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.15869 13C3.0423 11.5262 4.97888 10.5175 8.00021 10.5175C11.0215 10.5175 12.9581 11.5262 13.8417 13M10.4002 5.4C10.4002 6.72548 9.32569 7.8 8.00021 7.8C6.67473 7.8 5.60021 6.72548 5.60021 5.4C5.60021 4.07452 6.67473 3 8.00021 3C9.32569 3 10.4002 4.07452 10.4002 5.4Z"
+                    stroke="#687175" stroke-width="1.4" stroke-linecap="round" />
+                </svg>
+              </div>
               <input id="email" placeholder="Enter Your User ID" name="email" type="email" autocomplete="email" required
                 class="px-2 focus:border-zinc-100 focus:ring-zinc-100 focus:outline-none bg-zinc-100 w-full  border-0 py-2 placeholder:text-zinc-400 focus:text-zinc-950 text-sm   sm:text-sm sm:leading-6">
 
@@ -86,12 +73,12 @@
             </div>
             <div class="placeholder mt-2 bg-zinc-100 inline-flex items-center  w-full rounded-md overflow-hidden">
               <div class="px-2">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M6.00026 5.99991H6.08104M12.0008 14.4001L7.53897 10.0017C6.67553 10.3363 5.64392 10.2049 4.68558 9.92451C2.40321 9.25684 1.10205 6.89166 1.77935 4.64173C2.45665 2.3918 4.85593 1.10913 7.13829 1.7768C9.42066 2.44448 10.7218 4.80966 10.0445 7.05959L9.93825 7.63648L14.4001 12.0349V14.4001H12.0008Z"
-                  stroke="#687175" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.00026 5.99991H6.08104M12.0008 14.4001L7.53897 10.0017C6.67553 10.3363 5.64392 10.2049 4.68558 9.92451C2.40321 9.25684 1.10205 6.89166 1.77935 4.64173C2.45665 2.3918 4.85593 1.10913 7.13829 1.7768C9.42066 2.44448 10.7218 4.80966 10.0445 7.05959L9.93825 7.63648L14.4001 12.0349V14.4001H12.0008Z"
+                    stroke="#687175" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
 
               <input id="password" placeholder="******" name="password" type="password" autocomplete="current-password"
                 required
