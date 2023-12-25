@@ -22,7 +22,7 @@
 
 <body>
   <div class="flex flex-row">
-    <div class="relative flex flex-col bg-white text-gray-700 h-[100vh] basis-1/5 p-6 ">
+    <div class="relative flex flex-col bg-white text-gray-700 basis-1/5 p-6 h-screen ">
       <div class="p-[5px] flex justify-center">
         <svg width="93" height="56" viewBox="0 0 93 56" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_867_3048)">
@@ -193,9 +193,9 @@
 
     </div>
 
-    <div class="mt-4 basis-4/5 bg-white rounded-tl-3xl border-l border-t border-neutral-200">
+    <div class="mt-4 basis-4/5 bg-white rounded-tl-3xl border-l border-t border-neutral-200 p-9 flex flex-col gap-6 ">
 
-      <div class="p-9 flex flex-row gap-6 justify-between items-center flex-wrap">
+      <div class="flex flex-row gap-6 justify-between items-center flex-wrap">
 
         <div class="group bg-zinc-300 bg-opacity-40 rounded-md flex flex-row w-auto p-1.5">
           <button type="button"
@@ -243,11 +243,194 @@
       </div>
 
 
-      <div class="flex flex-row w-full justify-between">
-        
+      <div class="flex flex-row w-full justify-between gap-8">
+        <div class="bg-white rounded-xl shadow border border-zinc-200 flex flex-col justify-start items-start w-full ">
+          <div class="window-bar flex flex-row justify-between items-center w-full px-6 py-3 border-b border-zinc-300">
+            <span class="text-center text-black font-bold leading-normal">Customer Info</span>
+            <div class="group flex flex-row gap-4">
+              <button type=button class="text-zinc-300 focus:text-zinc-600"><i
+                  class="fa-regular fa-square-minus"></i></button>
+              <button type=button class="text-zinc-300 focus:text-zinc-600"><i
+                  class="fa-solid fa-maximize"></i></button>
+              <button type=button class="text-zinc-300 focus:text-zinc-600"><i
+                  class="fa-solid fa-angle-down"></i></button>
+            </div>
+
+          </div>
+
+          <div class="form flex flex-col p-6 w-full gap-6">
+
+            <div class="flex flex-row w-full gap-6">
+
+              <div class="flex flex-col justify-start gap-2 w-full">
+                <label class="text-black text-sm font-semibold leading-tight">Title</label>
+                <input
+                  class="text-zinc-500 text-sm font-normal px-4 py-3 bg-zinc-100 rounded-lg justify-start items-center gap-2 inline-flex"
+                  id="title" placeholder="Input Title" type="text" />
+              </div>
+
+              <div class="flex flex-col justify-start gap-2 w-full ">
+                <label class="text-black text-sm font-semibold leading-tight">Full Name</label>
+                <input
+                  class="text-zinc-500 text-sm font-normal px-4 py-3 bg-zinc-100 rounded-lg justify-start items-center gap-2 inline-flex"
+                  id="fullName" placeholder="Input full name" type="text" />
+              </div>
+
+            </div>
+
+            <div class="flex flex-row w-full gap-6">
+
+              <div class="flex flex-col justify-start gap-2 w-full">
+                <label class="text-black text-sm font-semibold leading-tight">Phone Number</label>
+                <input
+                  class="text-zinc-500 text-sm font-normal px-4 py-3 bg-zinc-100 rounded-lg justify-start items-center gap-2 inline-flex"
+                  id="phoneNumber" placeholder="Input phone number" type="tel" />
+              </div>
+
+              <div class="flex flex-col justify-start gap-2 w-full ">
+                <label class="text-black text-sm font-semibold leading-tight">Alt. Phone Number</label>
+                <input
+                  class="text-zinc-500 text-sm font-normal px-4 py-3 bg-zinc-100 rounded-lg justify-start items-center gap-2 inline-flex"
+                  id="altPhone" placeholder="Input alt. phone number" type="tel" />
+              </div>
+
+            </div>
+
+            <div class="flex flex-row w-full gap-6">
+
+              <div class="flex flex-col justify-start gap-2 w-full">
+                <label class="text-black text-sm font-semibold leading-tight">Email</label>
+                <input
+                  class="text-zinc-500 text-sm font-normal px-4 py-3 bg-zinc-100 rounded-lg justify-start items-center gap-2 inline-flex"
+                  id="email" placeholder="Input email" type="email" />
+              </div>
+
+              <div class="flex flex-col justify-start gap-2 w-full ">
+                <label class="text-black text-sm font-semibold leading-tight">Security Phrase</label>
+                <input
+                  class="text-zinc-500 text-sm font-normal px-4 py-3 bg-zinc-100 rounded-lg justify-start items-center gap-2 inline-flex"
+                  id="securityPhrase" placeholder="Input security phrase" type="text" />
+              </div>
+
+            </div>
+
+
+            <div class="flex flex-col gap-2 w-full">
+              <label class="text-black text-sm font-semibold leading-tight">Address Line 1</label>
+              <input
+                class="text-zinc-500 text-sm font-normal px-4 py-3 bg-zinc-100 rounded-lg justify-start items-center gap-2 inline-flex"
+                id="email" placeholder="Input address line 1" type="email" />
+            </div>
+
+            <div class="flex flex-col gap-2 w-full">
+              <label class="text-black text-sm font-semibold leading-tight">Address Line 2</label>
+              <input
+                class="text-zinc-500 text-sm font-normal px-4 py-3 bg-zinc-100 rounded-lg justify-start items-center gap-2 inline-flex"
+                id="email" placeholder="Input address line 2" type="email" />
+            </div>
+
+            <div class="flex flex-row w-full gap-6">
+
+              <div class="flex flex-col justify-start gap-2 w-full">
+                <label class="text-black text-sm font-semibold leading-tight">City</label>
+                <div class="px-4 py-3 rounded-lg bg-zinc-100">
+                  <select
+                    class="text-zinc-500 text-sm font-normal bg-transparent  w-full justify-start items-center gap-2 inline-flex ">
+                    <option>Choose city</option>
+                    <option>City 01</option>
+                    <option>City 02</option>
+                    <option>City 03</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="flex flex-col justify-start gap-2 w-full ">
+                <label class="text-black text-sm font-semibold leading-tight">State</label>
+                <div class="px-4 py-3 rounded-lg bg-zinc-100">
+                  <select
+                    class="text-zinc-500 text-sm font-normal bg-transparent  w-full justify-start items-center gap-2 inline-flex ">
+                    <option>Choose state</option>
+                    <option>State 01</option>
+                    <option>State 02</option>
+                    <option>State 03</option>
+                  </select>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="flex flex-row w-full gap-6">
+
+              <div class="flex flex-col justify-start gap-2 w-full">
+                <label class="text-black text-sm font-semibold leading-tight">Province</label>
+                <div class="px-4 py-3 rounded-lg bg-zinc-100">
+                  <select
+                    class="text-zinc-500 text-sm font-normal bg-transparent  w-full justify-start items-center gap-2 inline-flex ">
+                    <option>Choose province</option>
+                    <option>province 01</option>
+                    <option>province 02</option>
+                    <option>province 03</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="flex flex-col justify-start gap-2 w-full ">
+                <label class="text-black text-sm font-semibold leading-tight">Post Code</label>
+                <input
+                  class="text-zinc-500 text-sm font-normal px-4 py-3 bg-zinc-100 rounded-lg justify-start items-center gap-2 inline-flex"
+                  id="postCode" placeholder="Input post code" type="text" />
+              </div>
+
+            </div>
+
+            <div class="flex flex-col gap-2 w-full">
+              <label class="text-black text-sm font-semibold leading-tight">Comment</label>
+              <input
+                class="text-zinc-500 text-sm font-normal px-4 py-3 bg-zinc-100 rounded-lg justify-start items-center gap-2 inline-flex"
+                id="email" placeholder="Comment" type="textarea" rows="3" />
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+        <div class="bg-white rounded-xl shadow border border-zinc-200 flex flex-col justify-start items-start w-full ">
+          <div class="window-bar flex flex-row justify-between items-center w-full px-6 py-3 border-b border-zinc-300">
+            <span class="text-center text-black font-bold leading-normal">Scripts</span>
+            <div class="group flex flex-row gap-4">
+              <button type=button class="text-zinc-300 focus:text-zinc-600"><i
+                  class="fa-regular fa-square-minus"></i></button>
+              <button type=button class="text-zinc-300 focus:text-zinc-600"><i
+                  class="fa-solid fa-maximize"></i></button>
+              <button type=button class="text-zinc-300 focus:text-zinc-600"><i
+                  class="fa-solid fa-angle-down"></i></button>
+            </div>
+
+          </div>
+
+          <div class="flex flex-col p-6 w-full gap-6">
+
+
+            <div id="scriptPane " >
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+
       </div>
-
-
 
 
     </div>
@@ -255,10 +438,14 @@
 
 
 
-
-
-
   </div>
+
+
+
+
+
+
+
 
 
 </body>
