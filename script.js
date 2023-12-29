@@ -34,6 +34,9 @@ searchInput.addEventListener('input', () => {
 
 
 // Disable right-click
-document.addEventListener('contextmenu', function (event) {
-  event.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {
+  // Disable right-click
+  document.addEventListener('contextmenu', function (event) {
+      event.preventDefault();
+  });
 });
