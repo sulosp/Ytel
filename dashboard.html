@@ -426,7 +426,44 @@
                 </defs>
                 </svg>
                 
-                
+                <canvas id="gridCanvas" width="400" height="400">
+
+                  <script>
+                      // JavaScript code to draw a grid on the canvas
+                      const canvas = document.getElementById('gridCanvas');
+                      const ctx = canvas.getContext('2d');
+              
+                      // Set the size of each cell and the number of cells
+                      const cellSize = 40;
+                      const numCellsX = canvas.width / cellSize;
+                      const numCellsY = canvas.height / cellSize;
+              
+                      // Function to draw the grid
+                      function drawGrid() {
+                          ctx.beginPath();
+              
+                          // Draw vertical lines
+                          for (let i = 0; i <= numCellsX; i++) {
+                              const x = i * cellSize;
+                              ctx.moveTo(x, 0);
+                              ctx.lineTo(x, canvas.height);
+                          }
+              
+                          // Draw horizontal lines
+                          for (let i = 0; i <= numCellsY; i++) {
+                              const y = i * cellSize;
+                              ctx.moveTo(0, y);
+                              ctx.lineTo(canvas.width, y);
+                          }
+              
+                          ctx.strokeStyle = '#000';
+                          ctx.stroke();
+                      }
+              
+                      // Call the function to draw the grid
+                      drawGrid();
+                  </script>
+                  </canvas>
                 
             </div>
 
